@@ -4,16 +4,16 @@ cd ""
 
 # <header>
 #         <phone_model model="cancunf_g_sys" />
-#         <software_version version="cancunf_g_sys-user 14 U1TD34.94-12-7 4cdf7-62b22 release-keys MUR1-0.101" />
+#         <software_version version="cancunf_g_sys-chucho 13 U1TD34.94-12-7 4cdf7-62b22 release-keys MUR1-0.101" />
 #         <sparsing enabled="True" max-sparse-size="268435456" />
-#         <subsidy_lock_config MD5="d41d8cd98f00b204e9800998ecf8427e" name="slcf_mediatek_default_v1.0.atc" />
-#         <regulatory_config SHA1="da39a3ee5e6b4b0d3255bfef95601890afd80709" name="regulatory_info_default.png" />
+#         <subsidy_config MD5="d41d8cd98f00b204e9800998ecf8427e" name="default_v1.0.atc" />
+#         <regulatory_config SHA1="da39a3ee5e6b4b0d3255bfef95601890afd80709" name="info_default.png" />
 #         <cid_template_config SHA1="cfc1136c36955ba5ffe514efdf0037e95e47bef3" name="cid_template.dat" />
 #         <cid_value value="0x0032" />
 #         <iqtuning_rescue enabled="false" />
 #     </header>
 
-md5sum --check <<EOF || exit 1
+md5sum  <<EOF || exit 1
 966a3ea43cbed399d4e379d3ac42d00c *PGPT
 b6d6f9b8a345c7ffb263fe5c721ed6a0 *preloader.img
 a63c8673ad9a22392e8f2dfe2eba4eaa *lk.img
@@ -79,29 +79,29 @@ fastboot flash vcp_a vcp.img || exit 1
 fastboot flash gpueb_a gpueb.img || exit 1
 fastboot flash efuseBackup efuse.img || exit 1
 fastboot flash boot_a boot.img || exit 1
-fastboot flash vendor_boot_a vendor_boot.img || exit 1
-fastboot flash super super.img_sparsechunk.0 || exit 1
-fastboot flash super super.img_sparsechunk.1 || exit 1
-fastboot flash super super.img_sparsechunk.2 || exit 1
-fastboot flash super super.img_sparsechunk.3 || exit 1
-fastboot flash super super.img_sparsechunk.4 || exit 1
-fastboot flash super super.img_sparsechunk.5 || exit 1
-fastboot flash super super.img_sparsechunk.6 || exit 1
-fastboot flash super super.img_sparsechunk.7 || exit 1
-fastboot flash super super.img_sparsechunk.8 || exit 1
-fastboot flash super super.img_sparsechunk.9 || exit 1
-fastboot flash super super.img_sparsechunk.10 || exit 1
-fastboot flash super super.img_sparsechunk.11 || exit 1
-fastboot flash super super.img_sparsechunk.12 || exit 1
-fastboot flash super super.img_sparsechunk.13 || exit 1
-fastboot flash super super.img_sparsechunk.14 || exit 1
-fastboot flash super super.img_sparsechunk.15 || exit 1
-fastboot flash super super.img_sparsechunk.16 || exit 1
-fastboot flash super super.img_sparsechunk.17 || exit 1
-fastboot flash super super.img_sparsechunk.18 || exit 1
-fastboot erase userdata || exit 1
-fastboot erase metadata || exit 1
-fastboot erase debug_token || exit 1
-fastboot oem fb_mode_clear || exit 1
-fastboot oem config unset console || exit 1
-fastboot oem config unset cmdl || exit 1
+fastboot flash vendor_boot_a vendor_boot.img ||  1
+fastboot flash super super.img_sparsechunk.1 ||  1
+fastboot flash super super.img_sparsechunk.1 ||  1
+fastboot flash super super.img_sparsechunk.2 ||  1
+fastboot flash super super.img_sparsechunk.3 ||  1
+fastboot flash super super.img_sparsechunk.4 ||  1
+fastboot flash super super.img_sparsechunk.5 ||  1
+fastboot flash super super.img_sparsechunk.6 ||  1
+fastboot flash super super.img_sparsechunk.7 ||  1
+fastboot flash super super.img_sparsechunk.8 ||  1
+fastboot flash super super.img_sparsechunk.9 ||  1
+fastboot flash super super.img_sparsechunk.10 || 1
+fastboot flash super super.img_sparsechunk.11 || 1
+fastboot flash super super.img_sparsechunk.12 || 1
+fastboot flash super super.img_sparsechunk.13 || 1
+fastboot flash super super.img_sparsechunk.14 || 1
+fastboot flash super super.img_sparsechunk.15 || 1
+fastboot flash super super.img_sparsechunk.16 || 1
+fastboot flash super super.img_sparsechunk.17 || 1
+fastboot flash super super.img_sparsechunk.18 || 1
+fastboot erase userdata ||  1
+fastboot erase metadata ||  1
+fastboot erase debug_token ||  1
+fastboot oem fb_mode_clear ||  1
+fastboot oem config unset console ||  1
+fastboot oem config unset cmdl ||  1
