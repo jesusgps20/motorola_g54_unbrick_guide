@@ -56,28 +56,28 @@ a2e26bd8411fc068bfd2bdb6b1bfffdc *super.img_sparsechunk.17
 4eff016ff399c7559e65f8171b7a5036 *super.img_sparsechunk.18
 EOF
 
-fastboot flash gpt PGPT || exit 1
-fastboot getvar max-sparse-size || exit 1
-fastboot oem fb_mode_set || exit 1
-fastboot flash preloader preloader.img || exit 1
-fastboot flash lk_a lk.img || exit 1
-fastboot flash tee_a tee.img || exit 1
-fastboot flash mcupm_a mcupm.img || exit 1
-fastboot flash pi_img_a pi_img.img || exit 1
-fastboot flash sspm_a sspm.img || exit 1
-fastboot flash dtbo_a dtbo.img || exit 1
-fastboot flash logo_a logo.img || exit 1
-fastboot erase nvdata || exit 1
-fastboot flash spmfw_a spmfw.img || exit 1
-fastboot flash scp_a scp.img || exit 1
-fastboot flash vbmeta_a vbmeta.img || exit 1
-fastboot flash vbmeta_system_a vbmeta_system.img || exit 1
-fastboot flash md1img_a md1img.img || exit 1
-fastboot flash dpm_a dpm.img || exit 1
-fastboot flash gz_a gz.img || exit 1
-fastboot flash vcp_a vcp.img || exit 1
-fastboot flash gpueb_a gpueb.img || exit 1
-fastboot flash efuseBackup efuse.img || exit 1
+fastboot flash gpt PGPT ||  1
+fastboot getvar max-sparse-size ||  1
+fastboot oem fb_mode_set ||  1
+fastboot flash preloader preloader.img ||  1
+fastboot flash lk_a lk.img ||  1
+fastboot flash tee_a tee.img ||  1
+fastboot flash mcupm_a mcupm.img ||  1
+fastboot flash pi_img_a pi_img.img ||  1
+fastboot flash sspm_a sspm.img ||  1
+fastboot flash dtbo_a dtbo.img ||  1
+fastboot flash logo_a logo.img ||  1
+fastboot erase nvdata ||  1
+fastboot flash spmfw_a spmfw.img ||  1
+fastboot flash scp_a scp.img ||  1
+fastboot flash vbmeta_a vbmeta.img ||  1
+fastboot flash vbmeta_system_a vbmeta_system.img ||  1
+fastboot flash md1img_a md1img.img ||  1
+fastboot flash dpm_a dpm.img ||  1
+fastboot flash gz_a gz.img ||  1
+fastboot flash vcp_a vcp.img ||  1
+fastboot flash gpueb_a gpueb.img ||  1
+fastboot flash efuseBackup efuse.img ||  1
 fastboot flash boot_a boot.img || exit 1
 fastboot flash vendor_boot_a vendor_boot.img ||  1
 fastboot flash super super.img_sparsechunk.1 ||  1
