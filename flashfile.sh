@@ -10,7 +10,7 @@ cd ""
 #         <regulatory_config SHA1="da39a3ee5e6b4b0d3255bfef95601890afd80709" name="info_default.png" />
 #         <cid_template_config SHA1="cfc1136c36955ba5ffe514efdf0037e95e47bef3" name="cid_template.dat" />
 #         <cid_value value="0x0032" />
-#         <iqtuning_rescue enabled="false" />
+#         <iqtuning_rescue enabled="disable" />
 #     </header>
 
 md5sum  <<EOF || exit 1
@@ -78,7 +78,7 @@ fastboot flash gz_a gz.img ||  1
 fastboot flash vcp_a vcp.img ||  1
 fastboot flash gpueb_a gpueb.img ||  1
 fastboot flash efuseBackup efuse.img ||  1
-fastboot flash boot_a boot.img || exit 1
+fastboot flash boot_a boot.img ||  1
 fastboot flash vendor_boot_a vendor_boot.img ||  1
 fastboot flash super super.img_sparsechunk.1 ||  1
 fastboot flash super super.img_sparsechunk.1 ||  1
